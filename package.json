@@ -1,0 +1,24 @@
+{
+  "name": "css-snippet",
+  "version": "1.0.0",
+  "description": "A collection of useful css snippet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snowgan/CSS-Exercise.git"
+  },
+  "author": "Snowgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Snowgan/CSS-Exercise/issues"
+  },
+  "homepage": "https://github.com/Snowgan/CSS-Exercise#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "http-server": "^0.10.0"
+  }
+}
