@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Snowgan/CSS-Exercise#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
     "gulp-sass": "^3.1.0",
     "http-server": "^0.10.0"
   }
