@@ -1,10 +1,18 @@
-.box-1 {
-  padding: 6px 16px;
-  border: 1px solid #446d88;
-  background: #58a linear-gradient(#77a0bb, #58a);
-  border-radius: 4px;
-  box-shadow: 0 1px 5px grey;
-  color: #fff;
-  text-shadow: 0 -1px 1px #335166;
-  font-size: 20px;
-  line-height: 30px; }
+.case-box {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 10px 20px;
+  border: 1px solid #dedede; }
+
+.parent {
+  width: 400px;
+  height: 100px;
+  background: #E87A90;
+  text-align: center; }
+
+.child {
+  width: 30px;
+  height: 30px;
+  background: #DAC9A6;
+  display: inline-block; }
