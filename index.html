@@ -8,14 +8,38 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <div id="case-1" class="case-box">
-      <h3>Horizontal Center</h3>
-      <div class="parent">
-        <div class="child"></div>
+    <div id="case-1" class="case-box flex-container">
+      <div class="flex-header">
+        <span>Horizontal Center</span>
       </div>
-    </div>
-    <script>
+      <div class="flex-body">
+        <div class="left">
+          <div id="case-1-p" class="parent parent1">
+            <div id="case-1-c" class="child child1">
+            </div>
+          </div>
+        </div>
+        <div class="right code-box">
+          <div>
+            <input name="centerHor" type="radio" value="1" id="case-1-opt1" checked>
+            <label for="case-1-opt1" class="">.parent{text-align: center;} .child{display: inline-block;}</label>
+          </div>
+          <div>
+            <input name="centerHor" type="radio" value="2" id="case-2-opt1">
+            <label for="case-1-opt1" class="">.child{margin-left: auto; margin-right: auto;}</label>
+          </div>
+          <div>
+            <input name="centerHor" type="radio" value="3" id="case-3-opt1">
+            <label for="case-1-opt1" class="">.parent{position: relative;} .child{position: absolute; left: 50%; transform: translateX(-50%);}</label>
+          </div>
+          <div>
+            <input name="centerHor" type="radio" value="0" id="case-3-opt1">
+            <label for="case-1-opt1" class="">None</label>
+          </div>
+        </div>
+      </div>
       
-    </script>
+    </div>
+    <script src="js/index.js"></script>
   </body>
 </html>

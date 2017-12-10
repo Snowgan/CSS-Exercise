@@ -1,26 +1,97 @@
 $pc: #E87A90;
 $cc: #DAC9A6;
 
+@mixin desctext {
+  span {
+    float: left;
+    color: #eee;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 15rem;
+}
+
+.flex-header, .flex-footer {
+  flex: 0 0 4.4rem;
+}
+
+.flex-header {
+  font-size: 2rem;
+  font-weight: bold;
+  span {
+    line-height: 4.4rem;
+    vertical-align: middle;
+  }
+}
+
+.flex-body {
+  flex: auto;
+  display: flex;
+  .left {
+    flex: none;
+  }
+  .right {
+    flex: auto;
+  }
+}
+
 .case-box {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  padding: 5px 10px 20px;
+  padding: .5rem 1rem 2rem;
   border: 1px solid #dedede;
 }
 
 .parent {
-  width: 400px;
-  height: 100px;
+  width: 40rem;
+  height: 10rem;
   background: $pc;
-  text-align: center;
-  // border: 4px solid #DC9FB4;
+  &.parent1 {
+    text-align: center;
+  }
+  &.parent3 {
+    position: relative;
+  }
+  @include desctext;
 }
 
 .child {
-  width: 30px;
-  height: 30px;
+  width: 5rem;
+  height: 5rem;
   background: $cc;
-  display: inline-block;
-  // border: 4px solid #58B2DC;
+  &.child1 {
+    display: inline-block;
+  }
+  &.child2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.child3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include desctext;
+}
+
+.code-box {
+  padding: 0 1rem 0 5rem;
+  overflow: auto;
 }
