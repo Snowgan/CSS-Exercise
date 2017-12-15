@@ -8,6 +8,13 @@ $cc: #DAC9A6;
   }
 }
 
+@mixin centerY {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -18,6 +25,9 @@ html {
 
 body {
   font-size: 1.6rem;
+  color: #34495e;
+  background: #F2EFEA;
+  background-image: url(../img/bgimg.png);
 }
 
 
@@ -55,19 +65,41 @@ body {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
   padding: .5rem 1rem 2rem;
-  border: 1px solid #dedede;
+  border: 2px solid #ccc;
 }
 
 .parent {
   width: 40rem;
   height: 10rem;
   background: $pc;
-  &.parent1 {
+  &.parent1#case-1-p {
     text-align: center;
   }
-  &.parent3 {
+  &.parent3#case-1-p {
     position: relative;
+  }
+  &.parent4#case-1-p {
+    display: flex;
+    justify-content: center;
+  }
+  &.parent1#case-2-p {
+    line-height: 10rem;
+  }
+  &.parent2#case-2-p {
+    line-height: 10rem;
+  }
+  &.parent3#case-2-p {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &.parent4#case-2-p {
+    position: relative;
+  }
+  &.parent5#case-2-p {
+    display: flex;
+    align-items: center;
   }
   @include desctext;
 }
@@ -76,17 +108,29 @@ body {
   width: 5rem;
   height: 5rem;
   background: $cc;
-  &.child1 {
+  &.child1#case-1-c {
     display: inline-block;
   }
-  &.child2 {
+  &.child2#case-1-c {
     margin-left: auto;
     margin-right: auto;
   }
-  &.child3 {
+  &.child3#case-1-c {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+  }
+  &.child1#case-2-c {
+    display: inline;
+    vertical-align: middle;
+  }
+  &.child2#case-2-c {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 5rem;
+  }
+  &.child4#case-2-c {
+    @include centerY;
   }
   @include desctext;
 }
@@ -94,4 +138,17 @@ body {
 .code-box {
   padding: 0 1rem 0 5rem;
   overflow: auto;
+  > div {
+    position: relative;
+    input[type="radio"] {
+      @include centerY;
+    }
+    .code-label {
+      display: inline-block;
+      margin-left: 2rem;
+      pre {
+        margin: .8rem;
+      }
+    }
+  }
 }

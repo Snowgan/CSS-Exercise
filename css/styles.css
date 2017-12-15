@@ -5,7 +5,10 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  color: #34495e;
+  background: #F2EFEA;
+  background-image: url(../img/bgimg.png); }
 
 .flex-container {
   display: flex;
@@ -34,17 +37,33 @@ body {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
   padding: .5rem 1rem 2rem;
-  border: 1px solid #dedede; }
+  border: 2px solid #ccc; }
 
 .parent {
   width: 40rem;
   height: 10rem;
   background: #E87A90; }
-  .parent.parent1 {
+  .parent.parent1#case-1-p {
     text-align: center; }
-  .parent.parent3 {
+  .parent.parent3#case-1-p {
     position: relative; }
+  .parent.parent4#case-1-p {
+    display: flex;
+    justify-content: center; }
+  .parent.parent1#case-2-p {
+    line-height: 10rem; }
+  .parent.parent2#case-2-p {
+    line-height: 10rem; }
+  .parent.parent3#case-2-p {
+    display: table-cell;
+    vertical-align: middle; }
+  .parent.parent4#case-2-p {
+    position: relative; }
+  .parent.parent5#case-2-p {
+    display: flex;
+    align-items: center; }
   .parent span {
     float: left;
     color: #eee; }
@@ -53,15 +72,27 @@ body {
   width: 5rem;
   height: 5rem;
   background: #DAC9A6; }
-  .child.child1 {
+  .child.child1#case-1-c {
     display: inline-block; }
-  .child.child2 {
+  .child.child2#case-1-c {
     margin-left: auto;
     margin-right: auto; }
-  .child.child3 {
+  .child.child3#case-1-c {
     position: absolute;
     left: 50%;
     transform: translateX(-50%); }
+  .child.child1#case-2-c {
+    display: inline;
+    vertical-align: middle; }
+  .child.child2#case-2-c {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 5rem; }
+  .child.child4#case-2-c {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0; }
   .child span {
     float: left;
     color: #eee; }
@@ -69,3 +100,15 @@ body {
 .code-box {
   padding: 0 1rem 0 5rem;
   overflow: auto; }
+  .code-box > div {
+    position: relative; }
+    .code-box > div input[type="radio"] {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0; }
+    .code-box > div .code-label {
+      display: inline-block;
+      margin-left: 2rem; }
+      .code-box > div .code-label pre {
+        margin: .8rem; }
